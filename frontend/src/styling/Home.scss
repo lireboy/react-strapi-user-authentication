@@ -1,0 +1,11 @@
+.outer-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .navs{
+        display: flex;
+        flex-direction: row;
+        gap: 20px; 
+    }
+}
