@@ -3,18 +3,16 @@ import Home from './pages/Home/Home';
 import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import Products from './pages/Products/Products';
+import { Protector } from './helpers';
 
 function App() {
   return(
   <div>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Protector Component={Home}/>} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/products' element={<Products />} />
-
-
-
+        <Route path='/products' element={<Protector Component={Products}/>} />
       </Routes>
   </div>
   )
