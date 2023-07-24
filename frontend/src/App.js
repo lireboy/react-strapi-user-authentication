@@ -5,9 +5,11 @@ import Login from './pages/Login/Login';
 import Products from './pages/Products/Products';
 import { Protector } from './helpers';
 
+import './styling/App.scss'
+
 function App() {
   return(
-  <div>
+  <div className='app-container'>
       <Routes>
         <Route path='/' element={<Protector Component={Home}/>} />
         <Route path='/register' element={<Register />} />

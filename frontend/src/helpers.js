@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect } from "react";
 import {useNavigate} from "react-router-dom"
 export const storeUser = (data) => {
@@ -16,12 +17,14 @@ export const userData = () => {
 export const Protector = ({Component}) => {
     const navigate = useNavigate()
 
-    const { jwt } = userData()
-
     useEffect(() => {
-        if (!jwt){
-            navigate("/login")
-        }
-    }, [navigate, jwt])
+        try {
+            userData()
+           } catch (error) {
+             console.error("Something bad happened");
+             console.error(error);
+             navigate("/login")
+           }
+    })
     return <Component />
 }

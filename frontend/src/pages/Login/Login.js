@@ -39,6 +39,9 @@ export default function Login() {
             [name]: value,
         }))
     }
+    const navigateToRegister = () => {
+      navigate("/register")
+    }
 
     return (
       <div className="App">
@@ -63,7 +66,8 @@ export default function Login() {
             />
             </div>
         </form>
-        <button onClick={signUp}>Sign up</button>
+        <button onClick={signUp}>Login</button>
+        <a onClick={navigateToRegister}>Register</a>
       </div>
     );
 }

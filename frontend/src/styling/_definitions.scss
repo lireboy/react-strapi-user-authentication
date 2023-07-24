@@ -1,0 +1,17 @@
+$dark: #041C32;
+$medium-dark: #04293A;
+$light: #064663;
+$yellow: #ECB365;
+$white: #EEEEEE;
+
+
+button{
+    padding: 3px 10px;
+    color: $white;
+    background-color: $white;
+    border-radius: none;
+
+    &:hover{
+        filter: brightness(1.1);
+    }
+}
